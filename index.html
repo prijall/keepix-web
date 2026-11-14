@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light" />
+    <meta name="description" content="Keepix — Coming soon." />
+    <link rel="icon" href="data:," />
+    <title>Keepix — Coming soon</title>
+    <style>
+      :root {
+        --bg: #fcfcfb;
+        --ink: #141414;
+        --ink-soft: #3f3f3c;
+        --ink-faint: #6f6f6a;
+        --line: #e3e3de;
+        --line-strong: #c9c9c2;
+        --accent: #6b7a6e;
+      }
+
+      * { box-sizing: border-box; }
+
+      html, body { height: 100%; }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: ui-sans-system, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      .page {
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        padding: 0 24px;
+      }
+
+      main {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 64px 0 48px;
+      }
+
+      .center {
+        width: 100%;
+        max-width: 640px;
+        text-align: center;
+      }
+
+      .mark {
+        width: 40px;
+        height: 2px;
+        background: var(--accent);
+        margin: 0 auto 36px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(3.5rem, 11vw, 5.75rem);
+        line-height: 0.95;
+        font-weight: 650;
+        letter-spacing: -0.045em;
+        color: var(--ink);
+      }
+
+      .sub {
+        margin: 20px 0 0;
+        font-size: clamp(1.375rem, 4.5vw, 1.75rem);
+        line-height: 1.2;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        color: var(--ink-soft);
+      }
+
+      .rule {
+        width: 100%;
+        height: 1px;
+        background: var(--line);
+        margin: 40px auto 0;
+      }
+
+      .line {
+        margin: 28px auto 0;
+        max-width: 34ch;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: var(--ink-faint);
+      }
+
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 20px 0 calc(20px + env(safe-area-inset-bottom));
+      }
+
+      .footer-inner {
+        max-width: 1040px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .footer-domain {
+        font-size: 0.8125rem;
+        line-height: 1.4;
+        letter-spacing: 0.02em;
+        color: var(--ink-faint);
+      }
+
+      .footer-status {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.8125rem;
+        line-height: 1.4;
+        letter-spacing: 0.02em;
+        color: var(--ink-faint);
+        white-space: nowrap;
+      }
+
+      .dot {
+        width: 6px;
+        height: 6px;
+        background: var(--accent);
+        flex: none;
+      }
+
+      @media (max-width: 480px) {
+        .page { padding: 0 20px; }
+        main { padding: 48px 0 40px; }
+        .mark { margin-bottom: 28px; }
+        .rule { margin-top: 32px; }
+        .line { margin-top: 22px; }
+        .footer-inner { justify-content: center; }
+        .footer-status { display: none; }
+      }
+
+      @media (min-width: 900px) {
+        .page { padding: 0 40px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <main>
+        <div class="center">
+          <div class="mark" aria-hidden="true"></div>
+          <h1>Keepix</h1>
+          <p class="sub">Coming soon.</p>
+          <div class="rule" aria-hidden="true"></div>
+          <p class="line">Something is being built here.</p>
+        </div>
+      </main>
+
+      <footer>
+        <div class="footer-inner">
+          <span class="footer-domain">keepix.space</span>
+          <span class="footer-status"><span class="dot" aria-hidden="true"></span>Coming soon</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
